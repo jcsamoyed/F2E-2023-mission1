@@ -11,7 +11,9 @@
           <Button text="小額捐款" icon-position="before" icon-img="hand-coins.svg" />
           <ul class="nav-list">
             <li v-for="item in navList" :id="item.id" :key="item.id">
-              {{ item.name }}
+              <NuxtLink :to="`#${item.id}`">
+                {{ item.name }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -42,7 +44,9 @@
             <Button text="小額捐款" icon-position="before" icon-img="hand-coins.svg" />
             <ul class="nav-list">
               <li v-for="item in navList" :id="item.id" :key="item.id">
-                {{ item.name }}
+                <NuxtLink :to="`#${item.id}`">
+                  {{ item.name }}
+                </NuxtLink>
               </li>
             </ul>
           </div>
@@ -138,6 +142,11 @@ nav {
   display: flex;
   grid-gap: 24px;
   align-items: center;
+
+  a {
+    color: $gray5;
+    text-decoration: none;
+  }
 }
 
 .social-media-wrapper {
