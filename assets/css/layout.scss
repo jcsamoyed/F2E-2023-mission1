@@ -2,9 +2,34 @@ body {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
+::selection {
+  background-color: $gray5;
+  color: #fff;
+}
+
 .container {
   width: 90%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+section {
+  margin: 64px 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  section {
+    margin: 32px 0;
+  }
+
+  .row {
+    display: block;
+  }
 }
