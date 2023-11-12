@@ -3,5 +3,6 @@
     <IndexHeader />
     <IndexCandidateClaims />
     <IndexLatestEvents />
+    <IndexPolicyIssues />
   </div>
 </template>
