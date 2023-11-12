@@ -2,5 +2,6 @@
   <div>
     <IndexHeader />
     <IndexCandidateClaims />
+    <IndexLatestEvents />
   </div>
 </template>
