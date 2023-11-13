@@ -186,7 +186,7 @@ const donateList = reactive([
   }
 }
 
-@media (max-width:992px) {
+@media (max-width:1024px) {
   .side-block {
     margin-bottom: 32px;
 
