@@ -4,5 +4,6 @@
     <IndexCandidateClaims />
     <IndexLatestEvents />
     <IndexPolicyIssues />
+    <IndexSmallDonation />
   </div>
 </template>
