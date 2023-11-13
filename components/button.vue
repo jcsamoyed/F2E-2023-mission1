@@ -1,8 +1,8 @@
 <template>
   <button :class="props.size">
-    <img v-if="props.iconImg && props.iconPosition === 'before'" :src="getImageUrl(props.iconImg)" :alt="props.text">
+    <img v-if="props.iconImg && props.iconPosition === 'before'" :src="getImagePath(`/assets/images/button/${props.iconImg}`)" :alt="props.text">
     <span>{{ props.text }}</span>
-    <img v-if="props.iconImg && props.iconPosition === 'after'" :src="getImageUrl(props.iconImg)" :alt="props.text">
+    <img v-if="props.iconImg && props.iconPosition === 'after'" :src="getImagePath(`/assets/images/button/${props.iconImg}`)" :alt="props.text">
   </button>
 </template>
 
@@ -14,13 +14,6 @@ const props = defineProps({
   iconPosition: { type: String, default: 'after' },
   iconImg: { type: String, default: null },
 });
-
-// 動態取得圖片路徑
-const getImageUrl = (name: String): string => {
-  const assets: any = import.meta.glob('~/assets/images/button/*', { eager: true, import: 'default' });
-  return assets[`/assets/images/button/${name}`];
-};
-
 </script>
 
 <style lang="scss" scoped>

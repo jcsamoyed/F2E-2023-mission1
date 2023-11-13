@@ -6,7 +6,7 @@
         <ul class="event-wrapper">
           <li v-for="item in eventList" :key="item.title">
             <div class="img-block">
-              <img :src="getImageUrl(item.image)" :alt="item.title">
+              <img :src="getImagePath(`/assets/images/latestEvents/${item.image}`)" :alt="item.title">
             </div>
             <div class="content-block">
               <h3>{{ item.title }}</h3>
@@ -44,12 +44,6 @@ const eventList = reactive([
     image: 'cover-3.png',
   },
 ]);
-
-// 動態取得圖片路徑
-const getImageUrl = (name: String): string => {
-  const assets: any = import.meta.glob('~/assets/images/latestEvents/*', { eager: true, import: 'default' });
-  return assets[`/assets/images/latestEvents/${name}`];
-};
 </script>
 
 <style lang="scss" scoped>

@@ -35,7 +35,7 @@
                 已有 {{ item.people }} 人贊助
               </div>
             </div>
-            <img :src="getImageUrl(item.icon)" :alt="item.name">
+            <img :src="getImagePath(`/assets/images/smallDonations/${item.icon}`)" :alt="item.name">
           </li>
         </ul>
       </div>
@@ -74,13 +74,6 @@ const donateList = reactive([
     icon: 'plan-4.svg',
   },
 ]);
-
-// 動態取得圖片路徑
-const getImageUrl = (name: String): string => {
-  const assets: any = import.meta.glob('~/assets/images/smallDonations/*', { eager: true, import: 'default' });
-  return assets[`/assets/images/smallDonations/${name}`];
-};
-
 </script>
 
 <style lang="scss" scoped>

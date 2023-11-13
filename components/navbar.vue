@@ -20,7 +20,7 @@
         <ul class="social-media-wrapper">
           <li v-for="item in socialMediaList" :key="item.name">
             <NuxtLink :to="item.link" target="_blank" :title="item.name">
-              <img :src="getImageUrl(item.logo)" :alt="item.name">
+              <img :src="getImagePath(`/assets/images/navbar/${item.logo}`)" :alt="item.name">
             </NuxtLink>
           </li>
         </ul>
@@ -54,7 +54,7 @@
           <ul class="social-media-wrapper">
             <li v-for="item in socialMediaList" :key="item.name">
               <NuxtLink :to="item.link" target="_blank" :title="item.name">
-                <img :src="getImageUrl(item.logo)" :alt="item.name">
+                <img :src="getImagePath(`/assets/images/navbar/${item.logo}`)" :alt="item.name">
                 <span>{{ item.name }}</span>
               </NuxtLink>
             </li>
@@ -84,12 +84,6 @@ const navList = reactive([
     id: 'service-mail',
   },
 ]);
-
-// 動態取得圖片路徑
-const getImageUrl = (name: String): string => {
-  const assets: any = import.meta.glob('~/assets/images/navbar/*', { eager: true, import: 'default' });
-  return assets[`/assets/images/navbar/${name}`];
-};
 
 const socialMediaList = reactive([
   {

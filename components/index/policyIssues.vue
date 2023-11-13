@@ -18,7 +18,7 @@
           <h3>{{ activeContent.title }}</h3>
           <div class="content-block">
             <div v-for="item in activeContent.contentList" :key="item.title" class="content-box">
-              <img :src="getImageUrl(item.icon)" :alt="item.title">
+              <img :src="getImagePath(`/assets/images/policyIssues/${item.icon}`)" :alt="item.title">
               <h4>{{ item.title }}</h4>
               <p>{{ item.content }}</p>
             </div>
@@ -111,12 +111,6 @@ const activeContent = computed(() => {
 
 const changeActiveTab = (id) => {
   activeTab.value = id;
-};
-
-// 動態取得圖片路徑
-const getImageUrl = (name) => {
-  const assets = import.meta.glob('~/assets/images/policyIssues/*', { eager: true, import: 'default' });
-  return assets[`/assets/images/policyIssues/${name}`];
 };
 </script>
 
