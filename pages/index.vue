@@ -5,5 +5,6 @@
     <IndexLatestEvents />
     <IndexPolicyIssues />
     <IndexSmallDonation />
+    <IndexServiceMail />
   </div>
 </template>
