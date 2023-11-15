@@ -2,7 +2,7 @@
   <nav>
     <div class="container">
       <div class="nav-wrapper">
-        <NuxtLink to="/" title="首頁">
+        <NuxtLink to="/" title="首頁" @click="scrollToId('header')">
           <img src="@/assets/images/navbar/logo.png" alt="黑新星">
         </NuxtLink>
 
