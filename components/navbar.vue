@@ -100,7 +100,7 @@ const socialMediaList = reactive([
 ]);
 
 // 收合選單
-const isShowSidebar = ref(false);
+const isShowSidebar = useShowSidebar();
 const handleCloseSidebar = () => {
   isShowSidebar.value = false;
 };
