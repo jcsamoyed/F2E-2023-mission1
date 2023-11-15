@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <header>
+    <header id="header">
       <div class="cat">
         <img src="@/assets/images/header/cat.png" alt="黑新星">
         <Button text="候選人簡介" icon-img="arrow-right.svg" class="button" />

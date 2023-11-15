@@ -10,10 +10,8 @@
         <div class="nav-content">
           <Button text="小額捐款" icon-position="before" icon-img="hand-coins.svg" />
           <ul class="nav-list">
-            <li v-for="item in navList" :id="item.id" :key="item.id">
-              <NuxtLink :to="`#${item.id}`">
-                {{ item.name }}
-              </NuxtLink>
+            <li v-for="item in navList" :key="item.id" class="nav-item" @click="scrollToId(item.id)">
+              {{ item.name }}
             </li>
           </ul>
         </div>
@@ -43,10 +41,8 @@
           <div class="nav-content">
             <Button text="小額捐款" icon-position="before" icon-img="hand-coins.svg" />
             <ul class="nav-list">
-              <li v-for="item in navList" :id="item.id" :key="item.id">
-                <NuxtLink :to="`#${item.id}`">
-                  {{ item.name }}
-                </NuxtLink>
+              <li v-for="item in navList" :key="item.id" class="nav-item" @click="scrollToId(item.id)">
+                {{ item.name }}
               </li>
             </ul>
           </div>
@@ -103,6 +99,7 @@ const socialMediaList = reactive([
   },
 ]);
 
+// 收合選單
 const isShowSidebar = ref(false);
 const handleCloseSidebar = () => {
   isShowSidebar.value = false;
@@ -137,9 +134,12 @@ nav {
   grid-gap: 24px;
   align-items: center;
 
-  a {
-    color: $gray5;
-    text-decoration: none;
+  li {
+    transition-duration: .3s;
+    cursor: pointer;
+    &:hover {
+      color: $lime5;
+    }
   }
 }
 

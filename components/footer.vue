@@ -12,7 +12,7 @@
           <div class="list-box">
             <h5>快速連結</h5>
             <ul class="quick-link">
-              <li v-for="item in navList" :key="item.path">
+              <li v-for="item in navList" :key="item.name" @click="scrollToId(item.id)">
                 {{ item.name }}
               </li>
             </ul>
@@ -51,16 +51,16 @@
 const navList = reactive([
   {
     name: '首頁',
-    path: '/',
+    id: 'header',
   }, {
     name: '最新活動',
-    path: 'latest-events',
+    id: 'latest-events',
   }, {
     name: '政策議題',
-    path: 'policy-issues',
+    id: 'policy-issues',
   }, {
     name: '小額捐款',
-    path: 'mall-donations',
+    id: 'small-donations',
   },
 ]);
 
