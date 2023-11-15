@@ -7,4 +7,10 @@ export default (id) => {
     position = 'start';
   }
   section.scrollIntoView({ behavior: 'smooth', block: position });
+
+  // 點擊後關閉導覽列
+  if (window.innerWidth <= 1024) {
+    const isShowSidebar = useShowSidebar();
+    isShowSidebar.value = false;
+  }
 };
