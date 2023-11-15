@@ -8,7 +8,7 @@
 
         <!-- Desktop -->
         <div class="nav-content">
-          <Button text="小額捐款" icon-position="before" icon-img="hand-coins.svg" />
+          <Button text="小額捐款" icon-position="before" icon-img="hand-coins.svg" @click="scrollToId('small-donations')" />
           <ul class="nav-list">
             <li v-for="item in navList" :key="item.id" class="nav-item" @click="scrollToId(item.id)">
               {{ item.name }}
@@ -39,7 +39,7 @@
             <img src="@/assets/images/navbar/logo.png" alt="黑新星">
           </NuxtLink>
           <div class="nav-content">
-            <Button text="小額捐款" icon-position="before" icon-img="hand-coins.svg" />
+            <Button text="小額捐款" icon-position="before" icon-img="hand-coins.svg" @click="scrollToId('small-donations')" />
             <ul class="nav-list">
               <li v-for="item in navList" :key="item.id" class="nav-item" @click="scrollToId(item.id)">
                 {{ item.name }}
@@ -137,6 +137,7 @@ nav {
   li {
     transition-duration: .3s;
     cursor: pointer;
+
     &:hover {
       color: $lime5;
     }
