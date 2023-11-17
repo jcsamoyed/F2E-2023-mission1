@@ -15,6 +15,9 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.scss'],
+  plugins: [
+    { src: '@/plugins/aos.js', ssr: false },
+  ],
   vite: {
     css: {
       preprocessorOptions: {
