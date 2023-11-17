@@ -4,8 +4,12 @@
       <div class="row">
         <div class="side-block">
           <SectionTitle title="服務信箱" subtitle="Service Mail" />
-          <h3>您的聲音，我們的行動！</h3>
-          <p>親愛的鄉親，每一位市民的意見都是我們社區前進的原動力。無論大小事，我都誠摯希望聽到您的建議。分享您的想法，一同為我們的未來打造更美好！</p>
+          <h3 data-aos="fade-right" data-aos-delay="150">
+            您的聲音，我們的行動！
+          </h3>
+          <p data-aos="fade-right" data-aos-delay="150">
+            親愛的鄉親，每一位市民的意見都是我們社區前進的原動力。無論大小事，我都誠摯希望聽到您的建議。分享您的想法，一同為我們的未來打造更美好！
+          </p>
         </div>
         <div class="main-block">
           <form>
@@ -27,7 +31,14 @@
             </label>
             <Button text="確認送出" size="large" class="button" />
           </form>
-          <img src="@/assets/images/serviceMail/cat.png" class="cat" alt="黑新星">
+          <img
+            src="@/assets/images/serviceMail/cat.png"
+            class="cat"
+            data-aos="slide-left"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+            alt="黑新星"
+          >
         </div>
       </div>
     </div>

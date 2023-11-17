@@ -5,12 +5,12 @@
         <div class="side-block">
           <div class="head">
             <SectionTitle title="小額捐款" subtitle="Small Donations" />
-            <p class="slogan">
+            <p class="slogan" data-aos="fade-right" data-aos-delay="150">
               您的每筆捐款，<br>
               是每隻毛孩未來的大大動力！
             </p>
           </div>
-          <div class="total-block">
+          <div class="total-block" data-aos="flip-up" data-aos-delay="100">
             <span>目前贊助總金額</span>
             <div class="total-amount">
               {{ totalAmount.toLocaleString() }}

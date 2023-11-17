@@ -4,7 +4,7 @@
       <div class="row">
         <SectionTitle title="最新活動" subtitle="Latest Events" />
         <ul class="event-wrapper">
-          <li v-for="item in eventList" :key="item.title">
+          <li v-for="item in eventList" :key="item.title" data-aos="fade-left" data-aos-delay="150">
             <div class="img-block">
               <img :src="getImagePath(`/assets/images/latestEvents/${item.image}`)" :alt="item.title">
             </div>

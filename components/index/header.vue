@@ -3,12 +3,12 @@
     <header id="header">
       <div class="cat">
         <img src="@/assets/images/header/cat.png" alt="黑新星">
-        <Button text="候選人簡介" icon-img="arrow-right.svg" class="button" @click="scrollToId('candidate-claims')" />
+        <Button text="候選人簡介" icon-img="arrow-right.svg" class="button" data-aos="fade-right" @click="scrollToId('candidate-claims')" />
       </div>
       <div class="background">
-        <img src="@/assets/images/header/title.svg" class="title" alt="喵喵權益我帶頭">
-        <img src="@/assets/images/header/title-m.svg" class="title mobile" alt="喵喵權益我帶頭">
-        <p class="slogan">
+        <img src="@/assets/images/header/title.svg" class="title" data-aos="flip-left" alt="喵喵權益我帶頭">
+        <img src="@/assets/images/header/title-m.svg" class="title mobile" data-aos="flip-left" alt="喵喵權益我帶頭">
+        <p class="slogan" data-aos-anchor=".background">
           <img src="@/assets/images/header/vote.svg" alt="投票">
           <span>立委請支持</span>
           <img src="@/assets/images/header/no1.svg" alt="一號">
@@ -27,13 +27,13 @@ header {
 
 .background {
   position: relative;
+  background-color: $gray2;
+  border-radius: $sp3;
 }
 
 .title {
   display: block;
   width: 100%;
-  background-color: $gray2;
-  border-radius: $sp3;
   padding: 36.5px;
   box-sizing: border-box;
 

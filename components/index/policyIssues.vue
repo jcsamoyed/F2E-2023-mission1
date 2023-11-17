@@ -2,7 +2,7 @@
   <section id="policy-issues">
     <div class="container">
       <SectionTitle title="政策議題" subtitle="Policy Issues" />
-      <div class="tab-wrapper">
+      <div class="tab-wrapper" data-aos="fade-left">
         <div class="tab-block">
           <div
             v-for="item in tabList"
