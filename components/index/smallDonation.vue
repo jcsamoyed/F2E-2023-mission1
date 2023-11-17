@@ -32,7 +32,7 @@
                 </div>
               </div>
               <div class="footer">
-                已有 {{ item.people }} 人贊助
+                已有 {{ item.people.toLocaleString() }} 人贊助
               </div>
             </div>
             <img :src="getImagePath(`/assets/images/smallDonations/${item.icon}`)" :alt="item.name">
@@ -52,7 +52,7 @@ const donateList = reactive([
   {
     name: '喵衛星',
     amount: 600,
-    people: 2000,
+    people: 9957,
     icon: 'plan-1.svg',
   },
   {
@@ -64,13 +64,13 @@ const donateList = reactive([
   {
     name: '喵恆星',
     amount: 60000,
-    people: 2000,
+    people: 999,
     icon: 'plan-3.svg',
   },
   {
     name: '喵彗星',
     amount: null,
-    people: 2000,
+    people: 1200,
     icon: 'plan-4.svg',
   },
 ]);
