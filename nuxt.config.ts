@@ -2,6 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/F2E-2023-mission1/' : '/',
+    buildAssetsDir: '/static/',
     head: {
       title: '黑新星 | 2024 競選官方網站',
       meta: [
