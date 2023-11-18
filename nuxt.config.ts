@@ -14,6 +14,9 @@ export default defineNuxtConfig({
         { property: 'og:description', content: '喵喵權益我帶頭，我為喵民力爭上游。' },
         { property: 'og:url', content: 'https://jcsamoyed.github.io/F2E-2023-mission1' },
       ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: 'https://jcsamoyed.github.io/F2E-2023-mission1/favicon.ico' },
+      ],
     },
   },
   css: ['~/assets/css/main.scss'],
