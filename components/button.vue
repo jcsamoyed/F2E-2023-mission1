@@ -29,6 +29,7 @@ button {
   position: relative;
   font-family: 'Noto Sans TC', sans-serif;
   background-color: transparent;
+  color: $gray5;
   border: none;
   cursor: pointer;
   display: flex;
@@ -80,6 +81,16 @@ button {
     font-size: 20px;
     padding: $sp3 $sp4;
     border-radius: $sp3;
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    &:hover {
+      &::after {
+        content: none;
+      }
+    }
   }
 }
 </style>
