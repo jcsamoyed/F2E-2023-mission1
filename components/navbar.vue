@@ -186,6 +186,7 @@ nav {
   }
 
   .sidebar-wrapper {
+    display: block;
     position: fixed;
     top: 0;
     right: 0;
@@ -193,9 +194,12 @@ nav {
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(3px);
+    transform: translateX(100%);
+    transition-duration: .5s;
 
     &.open {
-      display: block;
+      transform: translateX(0);
+
     }
 
     .sidebar-block {
