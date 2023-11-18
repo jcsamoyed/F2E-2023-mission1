@@ -86,7 +86,7 @@ const socialMediaList = reactive([
 <style lang="scss" scoped>
 footer {
   background-color: $gray5;
-  padding: $sp4 $sp6;
+  padding: $sp4 0;
   color: #fff;
 }
 
@@ -148,7 +148,7 @@ p {
 
 @media (max-width:768px) {
   footer {
-    padding: $sp4 $sp3;
+    padding: $sp4 0;
   }
 
   .footer-block {
